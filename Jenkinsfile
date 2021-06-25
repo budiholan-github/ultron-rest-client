@@ -16,7 +16,9 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh 'bash ./jenkins/scripts/deliver.sh'
+        sh '''bash ./jenkins/scripts/deliver.sh
+
+java -jar target/ultron-rest-client-0.0.1-SNAPSHOT.jar'''
       }
     }
 
